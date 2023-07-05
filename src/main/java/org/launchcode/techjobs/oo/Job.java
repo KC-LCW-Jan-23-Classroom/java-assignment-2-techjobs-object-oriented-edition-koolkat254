@@ -100,14 +100,14 @@ public class Job {
                 (location == null || location.getValue().isEmpty()) &&
                 (positionType == null || positionType.getValue().isEmpty()) &&
                 (coreCompetency == null || coreCompetency.getValue().isEmpty())){
-            jobString = "OOPS! This job does not seem to exist.";
+            jobString = "\nOOPS! This job does not seem to exist.\n";
         } else {
             jobString = "\nID: " + id + "\n" +
                     "Name: " + (name.isEmpty() ? "Data not available" : name) + "\n" +
                     "Employer: " + (employer.getValue().isEmpty() ? "Data not available" : employer) + "\n" +
                     "Location: " + (location.getValue().isEmpty() ? "Data not available" : location) + "\n" +
                     "Position Type: " + (positionType.getValue().isEmpty() ? "Data not available" : positionType) + "\n" +
-                    "Core Competency: " + (coreCompetency.getValue().isEmpty() ? "Data not available" : coreCompetency);
+                    "Core Competency: " + (coreCompetency.getValue().isEmpty() ? "Data not available" : coreCompetency) + "\n" ;
         }
         return jobString;
     }

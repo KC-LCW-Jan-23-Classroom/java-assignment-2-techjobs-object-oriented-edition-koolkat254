@@ -43,13 +43,19 @@ public class JobTest {
     }
 
     @Test
+    public void testToStringStartsAndEndsWithNewLine(){
+        Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertTrue(job.toString().endsWith("\n"));
+        assertTrue(job.toString().startsWith("\n"));
+    }
+    @Test
     public void testToStringContainsCorrectLabelsAndData(){
         String expectedOutput = "\nID: 1\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
                 "Location: Desert\n" +
                 "Position Type: Quality control\n" +
-                "Core Competency: Persistence";
+                "Core Competency: Persistence\n";
 
         Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertEquals(expectedOutput,job.toString());
@@ -62,14 +68,14 @@ public class JobTest {
                 "Employer: ACME\n" +
                 "Location: Data not available\n" +
                 "Position Type: Quality control\n" +
-                "Core Competency: Data not available";
+                "Core Competency: Data not available\n";
         Job job = new Job("Product tester", new Employer("ACME"), new Location(""), new PositionType("Quality control"), new CoreCompetency(""));
         assertEquals(expectedOutput,job.toString());
     }
 
     @Test
     public void testToStringHandlesEmptyJob(){
-        String expectedOutput = "OOPS! This job does not seem to exist.";
+        String expectedOutput = "\nOOPS! This job does not seem to exist.\n";
         Job job = new Job();
         assertEquals(expectedOutput,job.toString());
     }
