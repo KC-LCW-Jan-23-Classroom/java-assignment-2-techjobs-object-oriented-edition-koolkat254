@@ -102,7 +102,7 @@ public class Job {
                 (coreCompetency == null || coreCompetency.getValue().isEmpty())){
             jobString = "OOPS! This job does not seem to exist.";
         } else {
-            jobString = "ID: " + id + "\n" +
+            jobString = "\nID: " + id + "\n" +
                     "Name: " + (name.isEmpty() ? "Data not available" : name) + "\n" +
                     "Employer: " + (employer.getValue().isEmpty() ? "Data not available" : employer) + "\n" +
                     "Location: " + (location.getValue().isEmpty() ? "Data not available" : location) + "\n" +

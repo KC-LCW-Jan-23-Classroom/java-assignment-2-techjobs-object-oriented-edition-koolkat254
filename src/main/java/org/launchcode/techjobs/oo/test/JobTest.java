@@ -44,7 +44,7 @@ public class JobTest {
 
     @Test
     public void testToStringContainsCorrectLabelsAndData(){
-        String expectedOutput = "ID: 1\n" +
+        String expectedOutput = "\nID: 1\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
                 "Location: Desert\n" +
@@ -57,7 +57,7 @@ public class JobTest {
 
     @Test
     public void testToStringHandlesEmptyField(){
-        String expectedOutput = "ID: 1\n" +
+        String expectedOutput = "\nID: 1\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
                 "Location: Data not available\n" +
